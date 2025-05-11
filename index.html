@@ -8,8 +8,27 @@
 </head>
 <body>
     <h1>PRP Manager</h1>
-    <div id="click-menu">
+    <div id="click-menu" style="display: none;">
         <p>Create Event</p>
+    </div>
+    <div id="popup" style="display: none;">
+        <h2>Create Event</h2>
+        <form id="event-form">
+            <label for="event-title">Event Name:</label>
+            <input type="text" id="event-name" name="event-name" required>
+            <label for="event-type">Event Type:</label>
+            <select id="event-type" name="event-type" required>
+                <option value="prp">Personalised Revision Plan</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="event-time">Event Start Time:</label>
+            <input type="time" id="event-time" name="event-time" required>
+            <label for="event-end-time">Event End Time</label>
+            <input type="time" id="event-end-time" name="event-end-time" required>
+
+            <button type="submit">Create</button>
+        </form>
+        <button id="close-popup">Close</button>
     </div>
     <table border="1" id="schedule">
         <tr>
